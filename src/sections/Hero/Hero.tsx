@@ -8,13 +8,23 @@ const StyledHero = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.primary.dark,
   height: "100vh",
   display: "flex",
+  justifyContent: "center",
   alignItems: "center",
+
+  [theme.breakpoints.up("xs")]: {
+    paddingTop: "100px",
+    paddingBottom: "24px",
+  },
+
+  [theme.breakpoints.up("md")]: {
+    paddingTop: "100px",
+  },
 }));
 
 const StyledImage = styled("img")(({ theme }) => ({
-  width: "100%",
+  width: "80%",
   borderRadius: "100%",
-  border: `2px solid ${theme.palette.warning.light}`,
+  border: `2px solid ${theme.palette.success.light}`,
 }));
 
 const Hero = () => {
@@ -34,6 +44,9 @@ const Hero = () => {
                 textAlign="center"
                 variant="h2"
                 pb={2}
+                sx={{
+                  cursor: "default",
+                }}
               >
                 Giordano Bruno Alencar
               </Typography>
@@ -41,6 +54,7 @@ const Hero = () => {
                 color="primary.contrastText"
                 textAlign="center"
                 variant="h2"
+                sx={{ cursor: "default" }}
               >
                 Front-End Developer
               </Typography>
@@ -59,9 +73,7 @@ const Hero = () => {
                   justifyContent="center"
                 >
                   <StyledButton>
-                    <DownloadOutlinedIcon
-                     sx={{ color: "warning.light" }}
-                    />
+                    <DownloadOutlinedIcon sx={{ color: "success.light" }} />
                     <Typography color="primary.contrastText">
                       Download CV
                     </Typography>
@@ -75,7 +87,7 @@ const Hero = () => {
                   justifyContent="center"
                 >
                   <StyledButton>
-                    <EmailOutlinedIcon sx={{ color: "warning.light" }} />
+                    <EmailOutlinedIcon sx={{ color: "success.light" }} />
                     <Typography color="primary.contrastText">
                       Contact Me
                     </Typography>

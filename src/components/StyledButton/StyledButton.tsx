@@ -8,7 +8,7 @@ interface StyledButtonProps {
 const StyledButton = ({ children }: StyledButtonProps) => {
   const StyledButton = styled("button")(({ theme }) => ({
     backgroundColor: "transparent",
-    border: `1px solid ${theme.palette.warning.light}`,
+    border: `1px solid ${theme.palette.success.light}`,
     borderRadius: "3px",
     padding: "5px 15px",
     width: "100%",
@@ -16,9 +16,11 @@ const StyledButton = ({ children }: StyledButtonProps) => {
     alignItems: "center",
     justifyContent: "center",
     gap: "10px",
+    transition: "0.1s ease",
+    cursor: "pointer",
 
     "&:hover": {
-      backgroundColor: theme.palette.secondary.light,
+      backgroundColor: theme.palette.info.dark,
     },
   }));
 

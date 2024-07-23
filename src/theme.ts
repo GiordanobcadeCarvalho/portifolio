@@ -19,7 +19,7 @@ const createResponsiveTheme = () => {
         main: "#274060", // Dark slate blue
       },
       success: {
-        main: "#2e8b57", // Dark sea green
+        main: "#2e8", // Dark sea green
       },
       background: {
         default: "#121212", // Almost black
@@ -31,7 +31,7 @@ const createResponsiveTheme = () => {
       },
     },
     typography: {
-      fontFamily: "Roboto Mono",
+      fontFamily: "'Montserrat', sans-serif",
     },
   });
 
